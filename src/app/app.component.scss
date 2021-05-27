@@ -1,0 +1,96 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.app-title-container {
+    height: 650px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, transparent, black), url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7ce55e30-e602-4e3d-b05a-d2a7a0fa49d8/daqj3gl-4b0e9766-45f6-4b13-a235-d8be30f13956.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdjZTU1ZTMwLWU2MDItNGUzZC1iMDVhLWQyYTdhMGZhNDlkOFwvZGFxajNnbC00YjBlOTc2Ni00NWY2LTRiMTMtYTIzNS1kOGJlMzBmMTM5NTYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.AB48zbNaKu7ZQ5Der7BQg9MbHCd0knXAftA-0xpk560');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 60%;
+}
+
+.app-title {
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: white;
+    font-family: 'Star Wars';
+    text-shadow: 2px 2px 3px black;
+}
+
+.search-bar-container {
+    width: 100%;
+}
+
+.results-section-container {
+    background-image: linear-gradient(to top, transparent, black 110%), url('https://pixy.org/src/474/4747717.png');
+    overflow: hidden;
+    height: 100%;
+}
+
+.description-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 800px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    perspective: 400px;
+    text-align: justify;
+
+}
+
+.crawl-text {
+    position: relative;
+    top: 9999px;
+    transform-origin: 50% 100%;
+    animation: crawl 50s linear;
+    animation-iteration-count: infinite;
+
+    .title {
+        font-size: 90%;
+        text-align: center;
+
+        .title-header {
+            font-size: 140%;
+            margin: 50px 0 100px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+.fade {
+    position: relative;
+    height: 65px;
+    width: 100%;
+    top: -25px;
+    background-image: linear-gradient(0deg, transparent, black 35%);
+    z-index: 1;
+}
+
+@keyframes crawl {
+    0% {
+        top: 600px;
+        transform: rotateX(20deg)  translateZ(0);
+    }
+    100% { 
+        top: -6000px;
+        transform: rotateX(25deg) translateZ(-2500px);
+    }
+  }
