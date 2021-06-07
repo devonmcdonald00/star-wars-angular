@@ -30,6 +30,9 @@
 
 .search-bar-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .results-section-container {
@@ -62,11 +65,11 @@
     animation-iteration-count: infinite;
 
     .title {
-        font-size: 90%;
         text-align: center;
 
         .title-header {
-            font-size: 140%;
+            display: inline;
+            font-size: 150%;
             margin: 50px 0 100px;
             text-transform: uppercase;
         }

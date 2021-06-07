@@ -32,3 +32,15 @@
 ::ng-deep .mat-form-field-underline {
     display: none;
 }
+
+@media (max-width: 1000px){
+    
+    .app-search-bar{
+        height: 120px;
+        .mat-form-field {
+            .mat-input-element {
+                font-size: 12px;
+            }
+        }
+    }
+}
