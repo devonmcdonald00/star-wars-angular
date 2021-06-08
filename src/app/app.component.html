@@ -4,24 +4,17 @@
     <h1 class='app-title'>STAR WARS GLOSSARY</h1>
   </div>
   <div class='search-bar-container'>
-      <app-search-bar></app-search-bar>
-      <app-search-button-group></app-search-button-group>
+      <app-search-bar (input_changed)="searchInputChange($event)"></app-search-bar>
+      <app-search-button-group
+        (character_search)="characterSearch()"
+        (planet_search)="planetSearch()"
+        (ship_search)="shipSearch()"
+        (shuffle)="shuffle()"
+      >
+      </app-search-button-group>
   </div>
    <div class='results-section-container'>
-      <div class='fade'></div>
-      <section class='description-container'>
-          <div class='crawl-text'>
-            <div class="title">
-              <p>Episode X</p>
-              <h1 class='title-header'>A newfound knowledge</h1>
-            </div>
-            
-            <p>Star Wars is one of the most popular Sci-Fi franchises in the world with a vast universe of planets, jedi, alien species, and anything else you can think of.</p>      
-            <p>There is always something interesting and new to learn about within the Star Wars universe. This web app was built to help with diving into anything you are curious about within this universe.</p>
-            <p>To begin, select if you would like to search for a planet, character, or ship. You can also generate random info cards if you want to start learning but don't have anything specific in mind</p>
-            <p>This app was developed by Devon McDonald using AngularJS and the swapi.</p>      
-          </div>
-    </section>
+      <app-scroll-text *ngIf='searchResults.length === 0'></app-scroll-text>
   </div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 
@@ -9,6 +9,10 @@ import { DomSanitizer } from "@angular/platform-browser";
   styleUrls: ['./search-button-group.component.scss']
 })
 export class SearchButtonGroupComponent implements OnInit {
+  @Output() character_search = new EventEmitter<void>();
+  @Output() planet_search = new EventEmitter<void>();
+  @Output() ship_search = new EventEmitter<void>();
+  @Output() shuffle = new EventEmitter<void>();
 
   constructor(private matIconRegistry:MatIconRegistry, private domSanitizer: DomSanitizer) { 
     this.matIconRegistry.addSvgIcon(
@@ -27,6 +31,19 @@ export class SearchButtonGroupComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  handleCharacterSearch(){
+    this.character_search.emit()
+  }
+  handlePlanetSearch(){
+    this.planet_search.emit()
+  }
+  handleShipSearch(){
+    this.ship_search.emit()
+  }
+  handleShuffle(){
+    this.shuffle.emit()
   }
 
 }

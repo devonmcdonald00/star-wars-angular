@@ -1,5 +1,5 @@
 <div class='app-search-bar'>
     <mat-form-field appearance='standard'>
-        <input matInput placeholder='Search for anything Star Wars here (people, planets, ships, etc)....' class='search-bar'/>
+        <input matInput placeholder='Search for anything Star Wars here (people, planets, ships, etc)....' class='search-bar' [(ngModel)]="searchInput" (change)="setSearchInput($event)"/>
     </mat-form-field>
 </div>

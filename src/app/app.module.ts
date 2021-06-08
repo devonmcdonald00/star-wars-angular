@@ -11,12 +11,15 @@ import { SearchButtonGroupComponent } from './search-button-group/search-button-
 import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from "@angular/common/http";
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { FormsModule } from '@angular/forms';
+import { ScrollTextComponent } from './scroll-text/scroll-text.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    SearchButtonGroupComponent
+    SearchButtonGroupComponent,
+    ScrollTextComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatInputModule,
     MatIconModule,
     HttpClientModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

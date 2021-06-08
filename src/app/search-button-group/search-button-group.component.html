@@ -1,6 +1,6 @@
 <div class='button-group'>
-    <mat-icon svgIcon="character_search_icon" matTooltip="Search for a Star Wars character"></mat-icon>
-    <mat-icon svgIcon="planet_search_icon" matTooltip="Search for a Star Wars planet"></mat-icon>
-    <mat-icon svgIcon="ship_search_icon" matTooltip="Search for Star Wars ship"></mat-icon>
-    <mat-icon style="display: flex;justify-content: center;align-items: center;" matTooltip="Randomly generate info cards">shuffle</mat-icon>
+    <mat-icon svgIcon="character_search_icon" matTooltip="Search for a Star Wars character" (click)="handleCharacterSearch()"></mat-icon>
+    <mat-icon svgIcon="planet_search_icon" matTooltip="Search for a Star Wars planet" (click)="handlePlanetSearch()"></mat-icon>
+    <mat-icon svgIcon="ship_search_icon" matTooltip="Search for Star Wars ship" (click)="handleShipSearch()"></mat-icon>
+    <mat-icon style="display: flex;justify-content: center;align-items: center;" matTooltip="Randomly generate info cards" (click)="handleShuffle()">shuffle</mat-icon>
 </div>
